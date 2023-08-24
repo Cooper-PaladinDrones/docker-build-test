@@ -50,5 +50,7 @@ jobs:
           context: .
           platforms: linux/arm64
           push: true
+          cache-from: type=gha
+          cache-to: type=gha, mode=minx
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
